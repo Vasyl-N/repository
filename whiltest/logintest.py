@@ -24,4 +24,4 @@ def test_login():
         #driver.find_element_by_xpath("//header/span[contains(text(),'Welcome')]")
         #assert driver.current_url == "https://v2.whil.blue/onboarding"
         #if driver.find_element_by_xpath("//header/span[contains(text(),'Welcome')]"):
-        print i + driver.current_url
+        print i +" " + driver.current_url
