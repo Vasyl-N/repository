@@ -52,6 +52,7 @@ def test_validform(driver):
 
     driver.find_element_by_name("password").clear()
     driver.find_element_by_name("password").send_keys("bla bla bla43")
+
     nouppercase = driver.find_element_by_xpath("//div[contains(@class, 'form-group') and .//input[@name='password']]//span[@class='text-danger' and text()!=0]").text
     assert nouppercase == "Use at least one uppercase character", "Wrong empty password message"
 
