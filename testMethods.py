@@ -8,74 +8,88 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 import random
 import string
-
-#@pytest.fixture
-# def driver(request):
-#     wd = webdriver.Chrome()
-#     request.addfinalizer(wd.quit)
-#     return wd
 from selenium.webdriver.support.wait import WebDriverWait
+import json
 
-
-email = ""
-pw = ""
-def test_reg():
-
-    regurl = "https://v2.whil.blue/sponsor/tml"
-    mailurl = "http://email-fake.com/yopmail.pp.ua/"
-    maildriver = webdriver.Chrome()
+# class tests():
+def setWDInstanse():
     driver = webdriver.Chrome()
-    maildriver.get(mailurl)
-    email = maildriver.find_element_by_id("email_ch_text").text
-    driver.get(regurl)
     driver.implicitly_wait(6)
+    return driver
+
+def setMailDriver():
+    maildriver = webdriver.Chrome()
+    return maildriver
+
+def setTestURL():
+    regurl = "https://v2.whil.blue/sponsor/tml"
+    return regurl
+
+def setMailUrl():
+    mailurl = "http://email-fake.com/yopmail.pp.ua/"
+    return mailurl
+
+def getRegURL(regurl, driver):
+    driver.get(regurl)
+def getMailURL(mailurl, maildriver):
+    maildriver.get(mailurl)
+def getEmail(maildriver):
+    email = maildriver.find_element_by_id("email_ch_text").text
+    return email
+def typeEmail(driver, email):
     driver.find_element_by_name("email").send_keys(email)
-    driver.find_element_by_name("first").send_keys(''.join(random.choice(string.lowercase) for i in range(20)))
-    driver.find_element_by_name("last").send_keys(''.join(random.choice(string.lowercase) for i in range(20)))
-    sleep(1)
+
+def randomStr():
+    return ''.join(random.choice(string.lowercase) for i in range(20))
+def typeFirst(driver, ranStr):
+    driver.find_element_by_name("first").send_keys(ranStr)
+
+def typeLast(driver, ranStr):
+    driver.find_element_by_name("last").send_keys(ranStr)
+def selectCity(driver):
     arr = []
     for i in driver.find_elements_by_xpath("//select[@name='requestPartyJoin.questionAnswers.1']/option"):
         arr.append(i.text)
     arr = arr[1:]
     Select(driver.find_element_by_name("requestPartyJoin.questionAnswers.1")).select_by_visible_text(random.choice(arr))
-    print arr
-   #Select(driver.find_element_by_name("requestPartyJoin.questionAnswers.1")).select_by_visible_text("London")
-
+def selectExperience(driver):
     arr = []
     for i in driver.find_elements_by_xpath("//select[@name='requestPartyJoin.questionAnswers.2']/option"):
         arr.append(i.text)
     arr = arr[1:]
     Select(driver.find_element_by_name("requestPartyJoin.questionAnswers.2")).select_by_visible_text(random.choice(arr))
-    print arr
-
-
-    #Select(driver.find_element_by_name("requestPartyJoin.questionAnswers.2")).select_by_value("2,no")
+def getPassword():
     pw = "Passw0rd!"
+    return pw
+def typePassword(driver, pw):
     driver.find_element_by_name("password").send_keys(pw)
     driver.find_element_by_name("passwordAgain").send_keys(pw)
+def writeCredentials(email, pw):
+    with open("credentials.json", "r") as f:
+        a = json.load(f)
+    a[email] = pw
+    print a
+    with open('credentials.json', "w") as d:
+        json.dump(a, d, indent=4)
 
-    #driver.find_element_by_xpath("//button/span[text()='JOIN']").click()
-    # def writemail():
-    file = open("mails.rtf", "a")
-    file.writelines(email + '\n')
-    file.close()
-
-    #wait = WebDriverWait(maildriver, 200)
-    #element = wait.until(EC.presence_of_element_located((By.LINK_TEXT,'Verify my email address')))
+# def writeEmailToFile(email):
+#     file = open("mails.rtf", "a")
+#     file.writelines(email + '\n')
+#     file.close()
+def clickJoin(driver):
+    driver.find_element_by_xpath("//button/span[text()='JOIN']").click()
+def verifyEmail(maildriver):
     try:
         WebDriverWait(maildriver, 100).until(EC.presence_of_element_located((By.XPATH, '//a[text()="Verify my email address"]')))
     finally:
         maildriver.find_element_by_xpath('//a[text()="Verify my email address"]').click()
-
-#def test_reg():
-#    driver = webdriver.Chrome()
-
-
+        maildriver.quit()
+        sleep(2)
+def login(driver,email):
     driver.get("https://v2.whil.blue")
     driver.find_element_by_name("email").send_keys(email)
     driver.find_element_by_name("password").send_keys("Passw0rd!", Keys.ENTER)
-
-
+def chooseGender(driver):
     arr = []
     male = (driver.find_element_by_xpath("//*[@data-value='Male']"))
     arr.append(male)
@@ -87,7 +101,7 @@ def test_reg():
     arr.append(skip)
     l = arr[random.randint(0, len(arr) - 1)]
     l.click()
-
+def setAge(driver):
     draggable_element = driver.find_element_by_css_selector("svg > circle:nth-of-type(2)")
     draggable_element.location
     actions = ActionChains(driver)
@@ -95,13 +109,13 @@ def test_reg():
     y = random.randint(0, 170)
     actions.drag_and_drop_by_offset(draggable_element, x, y)
     actions.perform()
-
+def selectMonth(driver):
     textarr = []
     for i in driver.find_elements_by_xpath("//select[@name='monthSelect']/option"):
         textarr.append(i.text)
     Select(driver.find_element_by_xpath("//select[@name='monthSelect']")).select_by_visible_text(random.choice(textarr))
     driver.find_element_by_xpath("//button[text()='Next']").click()
-
+def selectEXP(driver):
     arr = []
     male = (driver.find_element_by_xpath("//*[@data-value='Newbie']"))
     arr.append(male)
@@ -112,6 +126,7 @@ def test_reg():
     l = arr[random.randint(0, len(arr) - 1)]
     l.click()
     sleep(5)
+def userTips(driver):
     for i in range(5):
         sleep(1)
         driver.find_element_by_partial_link_text("Next").click()
