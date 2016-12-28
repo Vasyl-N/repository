@@ -4,31 +4,37 @@ from selenium import webdriver
 import random
 import string
 
+from selenium.webdriver import ActionChains
+from selenium.webdriver.common.keys import Keys
+
 email = ""
 pw = ""
 import json
 
+
 def test_reg():
+    regurl = "https://v2.whil.blue"
+    driver = webdriver.Chrome()
+    driver.get(regurl)
+    driver.implicitly_wait(6)
+    driver.find_element_by_name("email").send_keys("safmohamed@yopmail.pp.ua")
+    driver.find_element_by_name("password").send_keys("Passw0rd!", Keys.ENTER)
+    sleep(2)
+    driver.get("https://v2.whil.blue/onboarding/gender")
+    sleep(2)
+    arr = driver.find_elements_by_xpath("//div[@class='center-block']/div/div[.//span and .//img] | //button[@type='submit']")
+    print arr
+    # l = arr[random.randint(0, len(arr) - 1)]
+    arr[1].click()
+    sleep(3)
+    # l.click()
 
-    regurl = "https://v2.whil.blue/sponsor/tml"
-    mailurl = "http://email-fake.com/yopmail.pp.ua/"
-    maildriver = webdriver.Chrome()
-    #driver = webdriver.Chrome()
-    maildriver.get(mailurl)
-    email = maildriver.find_element_by_id("email_ch_text").text
-    # driver.get(regurl)
-    # driver.implicitly_wait(6)
-    # driver.find_element_by_name("email").send_keys(email)
-    # driver.find_element_by_name("first").send_keys(''.join(random.choice(string.lowercase) for i in range(20)))
-    # driver.find_element_by_name("last").send_keys(''.join(random.choice(string.lowercase) for i in range(20)))
-    # sleep(1)
-    pw = "Passw0rd!"
-    # driver.find_element_by_name("password").send_keys(pw)
-    # driver.find_element_by_name("passwordAgain").send_keys(pw)
 
-    with open("credentials.json", "r") as f:
-        a = json.load(f)
-    a[email] = pw
-    print a
-    with open('credentials.json', "w") as d:
-        json.dump(a, d, indent=4)
+    #
+    # draggable_element = driver.find_element_by_css_selector("svg > circle:nth-of-type(2)")
+    # print draggable_element.location
+    # actions = ActionChains(driver)
+    # x = random.randint(-80, 80)
+    # y = random.randint(0, 170)
+    # actions.drag_and_drop_by_offset(draggable_element, x, 170)
+    # actions.perform()

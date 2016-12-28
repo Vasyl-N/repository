@@ -24,13 +24,15 @@ def test_login():
         #driver.find_element_by_xpath("//header/span[contains(text(),'Welcome')]")
         #assert driver.current_url == "https://v2.whil.blue/onboarding"
         #if driver.find_element_by_xpath("//header/span[contains(text(),'Welcome')]"):
+        url = driver.current_url
         if driver.current_url == "https://v2.whil.blue/":
-            print "%s did NOT login" %i[0]
+            print "%s did NOT login" % i[0]
         elif driver.current_url == "https://v2.whil.blue/home":
-            print "%s is loged in SUCCESSFULLY" %i[0]
+            print "%s is logged in SUCCESSFULLY" % i[0]
         elif "https://v2.whil.blue/onboarding/" in driver.current_url:
-            print "%s is onboarding" %i[0]
-        else: print "Unknown condition" + driver.current_url
+            print "%s is on board" % i[0]
+        else:
+            print "%s - unknown url %s" % i([0], url)
 
     # with open("credentials.json", "r") as f:
     #     a = json.load(f)
