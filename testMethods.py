@@ -121,17 +121,12 @@ def login(driver, email, pw):
 
 
 def chooseGender(driver):
-    arr = []
-    male = (driver.find_element_by_xpath("//*[@data-value='Male']"))
-    arr.append(male)
-    female = (driver.find_element_by_xpath("//*[@data-value='Female']"))
-    arr.append(female)
-    other = (driver.find_element_by_xpath("//*[@data-value='Other']"))
-    arr.append(other)
-    skip = (driver.find_element_by_xpath("//*[@data-value='None']"))
-    arr.append(skip)
+    sleep(1)
+    arr = driver.find_elements_by_xpath(
+        "//div[@class='center-block']/div/div[.//span and .//img] | //button[@type='submit']")
     l = arr[random.randint(0, len(arr) - 1)]
     l.click()
+    sleep(2)
 
 
 def setAge(driver):
@@ -152,15 +147,9 @@ def selectMonth(driver):
 
 
 def selectEXP(driver):
-    arr = []
-    male = (driver.find_element_by_xpath("//*[@data-value='Newbie']"))
-    arr.append(male)
-    female = (driver.find_element_by_xpath("//*[@data-value='Some Experience']"))
-    arr.append(female)
-    other = (driver.find_element_by_xpath("//*[@data-value='Expert']"))
-    arr.append(other)
-    l = arr[random.randint(0, len(arr) - 1)]
-    l.click()
+    sleep(1)
+    arr = driver.find_elements_by_xpath("//div[@class='col-xs-4']")
+    arr[random.randint(0, len(arr) - 1)].click()
     sleep(5)
 
 

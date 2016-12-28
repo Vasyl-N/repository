@@ -10,14 +10,11 @@ regurl = "https://v2.whil.blue/sponsor/tml"
 
 def test_login():
     driver = webdriver.Chrome()
-    #driver.implicitly_wait(1)
     driver.get("https://v2.whil.blue")
-
     with open("credentials.json") as f:
         a = json.load(f)
     for i in a.items():
         driver.get("https://v2.whil.blue")
-        #i = i[:-1]
         driver.find_element_by_name("email").send_keys(i[0])
         driver.find_element_by_name("password").send_keys(i[1], Keys.ENTER)
         sleep(1)

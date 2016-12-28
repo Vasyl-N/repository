@@ -16,19 +16,16 @@ def test_mem_set():
     #     sleep(1)
     #     driver.find_element_by_partial_link_text("Next").click()
     driver.find_element_by_partial_link_text("Exit").click()
-    sleep(2)
+    sleep(1)
 
-    ms = driver.find_element_by_xpath('//a[@href="/settings"]')
-    ms.click()
-    sleep(2)
+    driver.find_element_by_xpath('//a[@href="/settings"]').click()
+    sleep(1)
 
     links = driver.find_elements_by_xpath("//a[@aria-label='menu item']")
-    links = links[1:-1]
-
+    links = links[:-1]
+    url = ""
     for i in links:
-        url = driver.current_url
         print i.text
         i.click()
-        sleep(1)
         assert url != driver.current_url
-
+        url = driver.current_url

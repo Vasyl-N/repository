@@ -20,12 +20,12 @@ def test_reg():
     driver.find_element_by_name("email").send_keys("safmohamed@yopmail.pp.ua")
     driver.find_element_by_name("password").send_keys("Passw0rd!", Keys.ENTER)
     sleep(2)
-    driver.get("https://v2.whil.blue/onboarding/gender")
+    driver.get("https://v2.whil.blue/onboarding/experience")
     sleep(2)
-    arr = driver.find_elements_by_xpath("//div[@class='center-block']/div/div[.//span and .//img] | //button[@type='submit']")
-    print arr
-    # l = arr[random.randint(0, len(arr) - 1)]
-    arr[1].click()
+    arr = driver.find_elements_by_xpath("//div[@class='col-xs-4']")
+    arr[random.randint(0, len(arr) - 1)].click()
+    # arr[1].click()
+
     sleep(3)
     # l.click()
 
