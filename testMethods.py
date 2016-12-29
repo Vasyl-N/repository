@@ -1,6 +1,7 @@
 from time import sleep
 import pytest
 from selenium import webdriver
+from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver import ActionChains
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import Select
@@ -158,3 +159,15 @@ def userTips(driver):
         sleep(1)
         driver.find_element_by_partial_link_text("Next").click()
     driver.find_element_by_partial_link_text("Done").click()
+
+
+def isElementPresent(driver, locator):
+    try:
+        driver.find_element_by_xpath(locator)
+    except NoSuchElementException:
+        return False
+    return True
+
+def wait_for_any_new_window(driver, old_windows, seconds):
+    WebDriverWait(driver, seconds).until(
+        lambda driver: old_windows != driver.window_handles)

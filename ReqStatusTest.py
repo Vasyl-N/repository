@@ -1,19 +1,25 @@
-from bs4 import BeautifulSoup
+import urllib
+from selenium import webdriver
+from bs4 import BeautifulSoup, BeautifulStoneSoup
 import urllib2
 import re
 import requests
+def test_bla()
 
-html_page = urllib2.urlopen("http://whil.com")
-soup = BeautifulSoup(html_page)
-links = []
+    f = urllib.urlopen("http://whil.com")
+    s = f.read()
+    f.close()
 
-for link in soup.findAll('a'):
-    links.append(link.get('href'))
-print(links)
+    # driver = webdriver.Chrome()
+    urls = "https?:\/\/(?:www\.|(?!www))[^\s\.]+\.[^\s]{2,}|www\.[^\s]+\.[^\s]{2,}"
+    result = re.match(urls, s)
+    print result
 
-for i in links:
-
-    r = requests.get(i)
-    print r.status_code
-    print r.headers
-    print r.content
+    #
+    # soup = BeautifulSoup(s)
+    # inputTag = soup.findAll(attrs={"name": "stainfo"})
+    # output = inputTag[0]['value']
+    # print output
+    #
+    # r = requests.get("http://whil.com")
+    # print r.status_code

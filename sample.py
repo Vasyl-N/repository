@@ -1,3 +1,5 @@
+import re
+import urllib
 from time import sleep
 import pytest
 from selenium import webdriver
@@ -13,24 +15,14 @@ import json
 
 
 def test_reg():
-    regurl = "https://v2.whil.blue"
-    driver = webdriver.Chrome()
-    driver.get(regurl)
-    driver.implicitly_wait(6)
-    driver.find_element_by_name("email").send_keys("safmohamed@yopmail.pp.ua")
-    driver.find_element_by_name("password").send_keys("Passw0rd!", Keys.ENTER)
-    sleep(2)
-    driver.get("https://v2.whil.blue/onboarding/experience")
-    sleep(2)
-    arr = driver.find_elements_by_xpath("//div[@class='col-xs-4']")
-    arr[random.randint(0, len(arr) - 1)].click()
-    # arr[1].click()
+    f = urllib.urlopen("http://whil.com")
+    s = f.read()
+    f.close()
 
-    sleep(3)
-    # l.click()
+    # driver = webdriver.Chrome()
+    result = re.match("(http|https)://[\w\-]+(\.[\w\-]+)+\S*", s)
+    print result
 
-
-    #
     # draggable_element = driver.find_element_by_css_selector("svg > circle:nth-of-type(2)")
     # print draggable_element.location
     # actions = ActionChains(driver)
