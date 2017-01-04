@@ -12,3 +12,9 @@ for el in jData["teamDetails"]:
     for users in el["users"]:
         if users["onboardYN"]==True:
             print el["name"], users["email"]
+
+
+# to read logs from browser
+driver.get("https://www.whil.com/")
+    for l in driver.get_log('browser'):
+            print 'Logs (2nd test):\n',l
