@@ -9,7 +9,7 @@ regurl = "https://v2.whil.blue/sponsor/tml"
 
 
 def test_login():
-    driver = webdriver.Chrome()
+    driver = webdriver.Firefox()
     driver.get("https://v2.whil.blue")
     with open("credentials.json") as f:
         a = json.load(f)

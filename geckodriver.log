@@ -1,0 +1,71 @@
+1483987134893	geckodriver	INFO	Listening on 127.0.0.1:49719
+1483987135884	mozprofile::profile	INFO	Using profile path /var/folders/tf/chljlmvx1ql3frlgpyxg2z4h0000gn/T/rust_mozprofile.y1zSozfjPWah
+1483987135885	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1483987135900	geckodriver::marionette	INFO	Connecting to Marionette on localhost:49728
+[warn] kq_init: detected broken kqueue; not using.: Undefined error: 0
+1483987136827	Marionette	INFO	Listening on port 49728
+[warn] kq_init: detected broken kqueue; not using.: Undefined error: 0
+JavaScript error: chrome://marionette/content/listener.js, line 999: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIWebProgress.removeProgressListener]
+1483987190573	geckodriver	INFO	Listening on 127.0.0.1:49930
+1483987191581	mozprofile::profile	INFO	Using profile path /var/folders/tf/chljlmvx1ql3frlgpyxg2z4h0000gn/T/rust_mozprofile.SiKUjJ8DFllS
+1483987191581	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1483987191584	geckodriver::marionette	INFO	Connecting to Marionette on localhost:49939
+[warn] kq_init: detected broken kqueue; not using.: Undefined error: 0
+1483987192184	Marionette	INFO	Listening on port 49939
+[warn] kq_init: detected broken kqueue; not using.: Undefined error: 0
+[warn] kq_init: detected broken kqueue; not using.: Undefined error: 0
+1483988874644	geckodriver	INFO	Listening on 127.0.0.1:50734
+1483988875647	mozprofile::profile	INFO	Using profile path /var/folders/tf/chljlmvx1ql3frlgpyxg2z4h0000gn/T/rust_mozprofile.2aiBuY3JZq4S
+1483988875648	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1483988875651	geckodriver::marionette	INFO	Connecting to Marionette on localhost:50743
+[warn] kq_init: detected broken kqueue; not using.: Undefined error: 0
+1483988876246	Marionette	INFO	Listening on port 50743
+[warn] kq_init: detected broken kqueue; not using.: Undefined error: 0
+1483988970629	geckodriver	INFO	Listening on 127.0.0.1:51017
+1483988971633	mozprofile::profile	INFO	Using profile path /var/folders/tf/chljlmvx1ql3frlgpyxg2z4h0000gn/T/rust_mozprofile.zIWcTpz8Xr18
+1483988971634	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1483988971637	geckodriver::marionette	INFO	Connecting to Marionette on localhost:51026
+[warn] kq_init: detected broken kqueue; not using.: Undefined error: 0
+1483988972321	Marionette	INFO	Listening on port 51026
+[warn] kq_init: detected broken kqueue; not using.: Undefined error: 0
+JavaScript error: https://v2.whil.blue/bundle130.js, line 37902: TypeError: action.payload.data is undefined
+1483988982637	geckodriver	INFO	Listening on 127.0.0.1:51082
+1483988983640	mozprofile::profile	INFO	Using profile path /var/folders/tf/chljlmvx1ql3frlgpyxg2z4h0000gn/T/rust_mozprofile.CUNexRXGsXvM
+1483988983641	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1483988983644	geckodriver::marionette	INFO	Connecting to Marionette on localhost:51091
+[warn] kq_init: detected broken kqueue; not using.: Undefined error: 0
+1483988984307	Marionette	INFO	Listening on port 51091
+[warn] kq_init: detected broken kqueue; not using.: Undefined error: 0
+JavaScript error: https://v2.whil.blue/bundle130.js, line 37902: TypeError: action.payload.data is undefined
+1483989081565	geckodriver	INFO	Listening on 127.0.0.1:51155
+1483989082570	mozprofile::profile	INFO	Using profile path /var/folders/tf/chljlmvx1ql3frlgpyxg2z4h0000gn/T/rust_mozprofile.ed0GuUeV0k1k
+1483989082571	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1483989082574	geckodriver::marionette	INFO	Connecting to Marionette on localhost:51164
+[warn] kq_init: detected broken kqueue; not using.: Undefined error: 0
+1483989083147	Marionette	INFO	Listening on port 51164
+[warn] kq_init: detected broken kqueue; not using.: Undefined error: 0
+JavaScript error: https://v2.whil.blue/bundle130.js, line 37902: TypeError: action.payload.data is undefined
+1483989139571	geckodriver	INFO	Listening on 127.0.0.1:51216
+1483989140578	mozprofile::profile	INFO	Using profile path /var/folders/tf/chljlmvx1ql3frlgpyxg2z4h0000gn/T/rust_mozprofile.ei2Mj20yTPGL
+1483989140579	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1483989140582	geckodriver::marionette	INFO	Connecting to Marionette on localhost:51225
+[warn] kq_init: detected broken kqueue; not using.: Undefined error: 0
+1483989141164	Marionette	INFO	Listening on port 51225
+[warn] kq_init: detected broken kqueue; not using.: Undefined error: 0
+JavaScript error: https://v2.whil.blue/bundle130.js, line 37902: TypeError: action.payload.data is undefined
+1483989248891	geckodriver	INFO	Listening on 127.0.0.1:51505
+1483989249900	mozprofile::profile	INFO	Using profile path /var/folders/tf/chljlmvx1ql3frlgpyxg2z4h0000gn/T/rust_mozprofile.c99arLVh5FSE
+1483989249900	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1483989249903	geckodriver::marionette	INFO	Connecting to Marionette on localhost:51514
+[warn] kq_init: detected broken kqueue; not using.: Undefined error: 0
+1483989250416	Marionette	INFO	Listening on port 51514
+[warn] kq_init: detected broken kqueue; not using.: Undefined error: 0
+JavaScript error: chrome://marionette/content/listener.js, line 999: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIWebProgress.removeProgressListener]
+1483989383627	geckodriver	INFO	Listening on 127.0.0.1:51562
+1483989384636	mozprofile::profile	INFO	Using profile path /var/folders/tf/chljlmvx1ql3frlgpyxg2z4h0000gn/T/rust_mozprofile.qy4YAmsdjQQb
+1483989384637	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1483989384640	geckodriver::marionette	INFO	Connecting to Marionette on localhost:51571
+[warn] kq_init: detected broken kqueue; not using.: Undefined error: 0
+1483989385176	Marionette	INFO	Listening on port 51571
+[warn] kq_init: detected broken kqueue; not using.: Undefined error: 0
+JavaScript error: chrome://marionette/content/listener.js, line 999: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIWebProgress.removeProgressListener]

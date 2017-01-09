@@ -1,32 +1,23 @@
-import re
-import urllib
-from time import sleep
-import pytest
-from selenium import webdriver
 import random
-import string
+from time import sleep
 
+from selenium import webdriver
 from selenium.webdriver import ActionChains
-from selenium.webdriver.common.keys import Keys
 
-email = ""
-pw = ""
-import json
+import testMethods as t
+driver = webdriver.Chrome()
+email = "okumura81@yopmail.pp.ua"
+password = "Passw0rd!"
+# def test_ff():
+t.login(driver, email, password)
+sleep(1)
+driver.get("https://v2.whil.blue/onboarding/age")
 
+draggable_element = driver.find_element_by_css_selector("svg > circle:nth-of-type(2)")
+actions = ActionChains(driver)
+x = random.randint(-80, 80)
+y = random.randint(0, 170)
+actions.drag_and_drop_by_offset(draggable_element, x, y)
+actions.perform()
 
-def test_reg():
-    f = urllib.urlopen("http://whil.com")
-    s = f.read()
-    f.close()
-
-    # driver = webdriver.Chrome()
-    result = re.match("(http|https)://[\w\-]+(\.[\w\-]+)+\S*", s)
-    print result
-
-    # draggable_element = driver.find_element_by_css_selector("svg > circle:nth-of-type(2)")
-    # print draggable_element.location
-    # actions = ActionChains(driver)
-    # x = random.randint(-80, 80)
-    # y = random.randint(0, 170)
-    # actions.drag_and_drop_by_offset(draggable_element, x, 170)
-    # actions.perform()
+t.selectMonth(driver)

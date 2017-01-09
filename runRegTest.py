@@ -1,3 +1,5 @@
+from time import sleep
+
 import testMethods as t
 def test_regtests():
     driver = t.setWDInstanse()
@@ -19,6 +21,7 @@ def test_regtests():
     t.verifyEmail(maildriver)
     t.login(driver, email, pw)
     t.chooseGender(driver)
+    sleep(1)
     t.setAge(driver)
     t.selectMonth(driver)
     t.selectEXP(driver)

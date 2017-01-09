@@ -15,7 +15,7 @@ import json
 
 # class tests():
 def setWDInstanse():
-    driver = webdriver.Chrome()
+    driver = webdriver.Firefox()
     driver.implicitly_wait(6)
     return driver
 
@@ -155,10 +155,14 @@ def selectEXP(driver):
 
 
 def userTips(driver):
-    for i in range(5):
+    for i in range(7):
         sleep(1)
         driver.find_element_by_partial_link_text("Next").click()
     driver.find_element_by_partial_link_text("Done").click()
+
+def skipUserTips(driver):
+    driver.find_element_by_partial_link_text("Exit").click()
+
 
 
 def isElementPresent(driver, locator):
@@ -167,6 +171,7 @@ def isElementPresent(driver, locator):
     except NoSuchElementException:
         return False
     return True
+
 
 def wait_for_any_new_window(driver, old_windows, seconds):
     WebDriverWait(driver, seconds).until(
