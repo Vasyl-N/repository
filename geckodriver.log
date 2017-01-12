@@ -1,7 +1,8 @@
-1483987134893	geckodriver	INFO	Listening on 127.0.0.1:49719
-1483987135884	mozprofile::profile	INFO	Using profile path /var/folders/tf/chljlmvx1ql3frlgpyxg2z4h0000gn/T/rust_mozprofile.y1zSozfjPWah
-1483987135885	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
-1483987135900	geckodriver::marionette	INFO	Connecting to Marionette on localhost:49728
+1483994065263	geckodriver	INFO	Listening on 127.0.0.1:55116
+1483994067283	mozprofile::profile	INFO	Using profile path C:\Users\Vasyl\AppData\Local\Temp\rust_mozprofile.KPlO4IIwyFGR
+1483994067293	geckodriver::marionette	INFO	Starting browser C:\Program Files\Mozilla Firefox\firefox.exe
+1483994067305	geckodriver::marionette	INFO	Connecting to Marionette on localhost:55132
+onette on localhost:49728
 [warn] kq_init: detected broken kqueue; not using.: Undefined error: 0
 1483987136827	Marionette	INFO	Listening on port 49728
 [warn] kq_init: detected broken kqueue; not using.: Undefined error: 0
