@@ -70,3 +70,50 @@ JavaScript error: chrome://marionette/content/listener.js, line 999: NS_ERROR_FA
 1483989385176	Marionette	INFO	Listening on port 51571
 [warn] kq_init: detected broken kqueue; not using.: Undefined error: 0
 JavaScript error: chrome://marionette/content/listener.js, line 999: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIWebProgress.removeProgressListener]
+1483990252591	geckodriver	INFO	Listening on 127.0.0.1:51815
+1483990253597	mozprofile::profile	INFO	Using profile path /var/folders/tf/chljlmvx1ql3frlgpyxg2z4h0000gn/T/rust_mozprofile.b7u3ZsOpeznP
+1483990253598	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1483990253601	geckodriver::marionette	INFO	Connecting to Marionette on localhost:51824
+[warn] kq_init: detected broken kqueue; not using.: Undefined error: 0
+1483990254159	Marionette	INFO	Listening on port 51824
+[warn] kq_init: detected broken kqueue; not using.: Undefined error: 0
+JavaScript error: chrome://marionette/content/listener.js, line 999: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIWebProgress.removeProgressListener]
+1483993199594	geckodriver	INFO	Listening on 127.0.0.1:51766
+1483993200595	mozprofile::profile	INFO	Using profile path /var/folders/tf/chljlmvx1ql3frlgpyxg2z4h0000gn/T/rust_mozprofile.ZkVDSpWnZFjr
+1483993200596	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1483993200599	geckodriver::marionette	INFO	Connecting to Marionette on localhost:51791
+[warn] kq_init: detected broken kqueue; not using.: Undefined error: 0
+1483993201360	Marionette	INFO	Listening on port 51791
+[warn] kq_init: detected broken kqueue; not using.: Undefined error: 0
+JavaScript error: chrome://marionette/content/listener.js, line 999: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIWebProgress.removeProgressListener]
+1483993257346	geckodriver	INFO	Listening on 127.0.0.1:52806
+1483993258350	mozprofile::profile	INFO	Using profile path /var/folders/tf/chljlmvx1ql3frlgpyxg2z4h0000gn/T/rust_mozprofile.BAigAtE7zYjL
+1483993258350	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1483993258353	geckodriver::marionette	INFO	Connecting to Marionette on localhost:52831
+[warn] kq_init: detected broken kqueue; not using.: Undefined error: 0
+1483993258974	Marionette	INFO	Listening on port 52831
+[warn] kq_init: detected broken kqueue; not using.: Undefined error: 0
+JavaScript error: chrome://marionette/content/listener.js, line 999: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIWebProgress.removeProgressListener]
+1483993544127	geckodriver	INFO	Listening on 127.0.0.1:57627
+1483993545126	mozprofile::profile	INFO	Using profile path /var/folders/tf/chljlmvx1ql3frlgpyxg2z4h0000gn/T/rust_mozprofile.Rqi2bxkGjNaS
+1483993545128	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1483993545130	geckodriver::marionette	INFO	Connecting to Marionette on localhost:57652
+[warn] kq_init: detected broken kqueue; not using.: Undefined error: 0
+1483993545800	Marionette	INFO	Listening on port 57652
+[warn] kq_init: detected broken kqueue; not using.: Undefined error: 0
+JavaScript error: chrome://marionette/content/listener.js, line 999: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIWebProgress.removeProgressListener]
+1483993940725	geckodriver	INFO	Listening on 127.0.0.1:65200
+1483993941733	mozprofile::profile	INFO	Using profile path /var/folders/tf/chljlmvx1ql3frlgpyxg2z4h0000gn/T/rust_mozprofile.c9toKQcsmxZj
+1483993941734	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1483993941737	geckodriver::marionette	INFO	Connecting to Marionette on localhost:65230
+[warn] kq_init: detected broken kqueue; not using.: Undefined error: 0
+1483993942357	Marionette	INFO	Listening on port 65230
+[warn] kq_init: detected broken kqueue; not using.: Undefined error: 0
+JavaScript error: chrome://marionette/content/listener.js, line 999: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIWebProgress.removeProgressListener]
+1484083500955	geckodriver	INFO	Listening on 127.0.0.1:50564
+1484083501948	mozprofile::profile	INFO	Using profile path /var/folders/tf/chljlmvx1ql3frlgpyxg2z4h0000gn/T/rust_mozprofile.fCOQgfdH21c8
+1484083501949	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1484083501961	geckodriver::marionette	INFO	Connecting to Marionette on localhost:50573
+[warn] kq_init: detected broken kqueue; not using.: Undefined error: 0
+1484083502902	Marionette	INFO	Listening on port 50573
+[warn] kq_init: detected broken kqueue; not using.: Undefined error: 0

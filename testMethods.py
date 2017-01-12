@@ -15,7 +15,7 @@ import json
 
 # class tests():
 def setWDInstanse():
-    driver = webdriver.Firefox()
+    driver = webdriver.Chrome()
     driver.implicitly_wait(6)
     return driver
 
@@ -26,7 +26,7 @@ def setMailDriver():
 
 
 def setTestURL():
-    regurl = "https://v2.whil.blue/sponsor/tml"
+    regurl = "https://v2.whil.blue/sponsor/fr"
     return regurl
 
 
@@ -65,19 +65,26 @@ def typeLast(driver, ranStr):
 
 
 def selectCity(driver):
-    arr = []
-    for i in driver.find_elements_by_xpath("//select[@name='requestPartyJoin.questionAnswers.1']/option"):
-        arr.append(i.text)
-    arr = arr[1:]
-    Select(driver.find_element_by_name("requestPartyJoin.questionAnswers.1")).select_by_visible_text(random.choice(arr))
-
+    try:
+        arr = []
+        for i in driver.find_elements_by_xpath("//select[@name='requestPartyJoin.questionAnswers.1']/option"):
+            arr.append(i.text)
+        arr = arr[1:]
+        Select(driver.find_element_by_name("requestPartyJoin.questionAnswers.1")).select_by_visible_text(
+            random.choice(arr))
+    except NoSuchElementException:
+        pass
 
 def selectExperience(driver):
-    arr = []
-    for i in driver.find_elements_by_xpath("//select[@name='requestPartyJoin.questionAnswers.2']/option"):
-        arr.append(i.text)
-    arr = arr[1:]
-    Select(driver.find_element_by_name("requestPartyJoin.questionAnswers.2")).select_by_visible_text(random.choice(arr))
+    try:
+        arr = []
+        for i in driver.find_elements_by_xpath("//select[@name='requestPartyJoin.questionAnswers.2']/option"):
+            arr.append(i.text)
+        arr = arr[1:]
+        Select(driver.find_element_by_name("requestPartyJoin.questionAnswers.2")).select_by_visible_text(
+            random.choice(arr))
+    except NoSuchElementException:
+        pass
 
 
 def getPassword():
@@ -160,9 +167,9 @@ def userTips(driver):
         driver.find_element_by_partial_link_text("Next").click()
     driver.find_element_by_partial_link_text("Done").click()
 
+
 def skipUserTips(driver):
     driver.find_element_by_partial_link_text("Exit").click()
-
 
 
 def isElementPresent(driver, locator):
