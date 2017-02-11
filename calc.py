@@ -37,7 +37,6 @@ class Calculator(object):
         num = s[0]
         if int(num)==num:
             num = int(num)
-        print num
         return num
 
     def res(self, str):
@@ -46,4 +45,7 @@ a = Calculator()
 
 
 
-res("127")
+def res(str):
+    return Calculator.sum(a, Calculator.multdiv(a, str))
+print(res("23 - 5 + 5 * 6  *  2 / 2 + 50 / 2 * 6 + 3 / 3 * 2 * 10 / 13"))
+
