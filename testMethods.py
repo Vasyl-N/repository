@@ -162,7 +162,7 @@ def selectEXP(driver):
 
 
 def userTips(driver):
-    for i in range(7):
+    for i in range(6):
         sleep(1)
         driver.find_element_by_partial_link_text("Next").click()
     driver.find_element_by_partial_link_text("Done").click()

@@ -1,7 +1,7 @@
 class Calculator(object):
     def multdiv(self, s):
         s = s.split()
-        i=0
+        i = 0
         while i < len(s):
             if s[i] == "*":
                 res = float(s[i - 1]) * float(s[i + 1])
@@ -18,8 +18,7 @@ class Calculator(object):
 
 
     def sum(self, s):
-
-        i=0
+        i = 0
         while i <= len(s):
             if s[i] == "+":
                 res = float(s[i - 1]) + float(s[i + 1])
@@ -40,7 +39,11 @@ class Calculator(object):
             num = int(num)
         print num
         return num
+
+    def res(self, str):
+        return Calculator.sum(a, Calculator.multdiv(a, str))
 a = Calculator()
-def res(str):
-    Calculator.sum(a, Calculator.multdiv(a, str))
-res("23 - 5 + 5 * 6  *  2 / 2 + 50 / 2 * 6 + 3 / 3 * 2 * 10 / 13")
+
+
+
+res("127")
