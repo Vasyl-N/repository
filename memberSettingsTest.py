@@ -29,6 +29,3 @@ def test_mem_set():
         i.click()
         assert url != driver.current_url
         url = driver.current_url
-
-
-        
