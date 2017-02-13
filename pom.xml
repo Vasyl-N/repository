@@ -12,7 +12,7 @@
         <version>2.53.0</version>
     </dependency>
   </dependencies>
-
+    <plugins>
     <plugin>
         <groupId>com.mycompany.app</groupId>
         <artifactId>my-app</artifactId>
@@ -34,5 +34,6 @@
             </execution>
         </executions>
     </plugin>
+    </plugins>
 
 </project>
