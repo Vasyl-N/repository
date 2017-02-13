@@ -25,11 +25,11 @@ def test_login():
         if driver.current_url == "https://v2.whil.blue/":
             print "%s did NOT login" % i[0]
         elif driver.current_url == "https://v2.whil.blue/home":
-            print "%s is logged in SUCCESSFULLY" % i[0]
+            print("%s is logged in SUCCESSFULLY" % i[0])
         elif "https://v2.whil.blue/onboarding/" in driver.current_url:
-            print "%s is on board" % i[0]
+            print("%s is on board" % i[0])
         else:
-            print "%s - unknown url %s" % i([0], url)
+            print("%s - unknown url %s" % i([0], url))
 
     # with open("credentials.json", "r") as f:
     #     a = json.load(f)
