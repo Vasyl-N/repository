@@ -239,3 +239,32 @@ exports.makeInfallible/<@resource://gre/modules/commonjs/toolkit/loader.js -> re
 [warn] kq_init: detected broken kqueue; not using.: Undefined error: 0
 [Child 3527] ###!!! ABORT: Aborting on channel error.: file /builds/slave/m-rel-m64-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2056
 [Child 3527] ###!!! ABORT: Aborting on channel error.: file /builds/slave/m-rel-m64-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2056
+1486951557584	geckodriver	INFO	Listening on 127.0.0.1:55071
+1486951558565	mozprofile::profile	INFO	Using profile path /var/folders/tf/chljlmvx1ql3frlgpyxg2z4h0000gn/T/rust_mozprofile.gr9PWBARCZh9
+1486951558566	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1486951558581	geckodriver::marionette	INFO	Connecting to Marionette on localhost:55082
+[warn] kq_init: detected broken kqueue; not using.: Undefined error: 0
+1486951559523	Marionette	INFO	Listening on port 55082
+[warn] kq_init: detected broken kqueue; not using.: Undefined error: 0
+JavaScript error: resource://app/modules/UITour.jsm, line 691: TypeError: window is null
+JavaScript error: resource://app/modules/UITour.jsm, line 691: TypeError: window is null
+JavaScript error: resource://app/modules/UITour.jsm, line 691: TypeError: window is null
+JavaScript error: resource://app/modules/UITour.jsm, line 691: TypeError: window is null
+[warn] kq_init: detected broken kqueue; not using.: Undefined error: 0
+1486951815541	geckodriver	INFO	Listening on 127.0.0.1:55225
+1486951816549	mozprofile::profile	INFO	Using profile path /var/folders/tf/chljlmvx1ql3frlgpyxg2z4h0000gn/T/rust_mozprofile.eH4xxTEoBse9
+1486951816550	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1486951816554	geckodriver::marionette	INFO	Connecting to Marionette on localhost:55234
+[warn] kq_init: detected broken kqueue; not using.: Undefined error: 0
+1486951817364	Marionette	INFO	Listening on port 55234
+[warn] kq_init: detected broken kqueue; not using.: Undefined error: 0
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x4A00C2,name=PContent::Msg_ConsoleMessage) Channel closing: too late to send/recv, messages will be lost
+
+1486957446819	geckodriver	INFO	Listening on 127.0.0.1:58701
+1486957447816	mozprofile::profile	INFO	Using profile path /var/folders/tf/chljlmvx1ql3frlgpyxg2z4h0000gn/T/rust_mozprofile.Nw0OVQhKimC6
+1486957447817	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1486957447822	geckodriver::marionette	INFO	Connecting to Marionette on localhost:58710
+[warn] kq_init: detected broken kqueue; not using.: Undefined error: 0
+1486957448929	Marionette	INFO	Listening on port 58710
+[warn] kq_init: detected broken kqueue; not using.: Undefined error: 0

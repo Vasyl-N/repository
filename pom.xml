@@ -4,8 +4,6 @@
   <artifactId>my-app</artifactId>
   <version>1</version>
 
-    <build>
-
   <dependencies>
     <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
     <dependency>
@@ -14,6 +12,7 @@
         <version>2.53.0</version>
     </dependency>
   </dependencies>
+    <build>
     <plugins>
     <plugin>
         <groupId>com.mycompany.app</groupId>
