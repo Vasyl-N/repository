@@ -1,12 +1,18 @@
 from time import sleep
 import pytest
+from _pytest import unittest
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import json
 
 regurl = "https://v2.whil.blue/sponsor/tml"
+if __name__ == '__main__':
+    import xmlrunner
 
+    unittest.main(testRunner=xmlrunner.XMLTestRunner(output='test-reports'))
 def test_login():
+
+
     driver = webdriver.Firefox()
     driver.get("https://v2.whil.blue")
     with open("credentials.json") as f:

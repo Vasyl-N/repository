@@ -1,16 +1,16 @@
 from time import sleep
+
+from _pytest import junitxml
+from _pytest import unittest
 from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.keys import Keys
-
-import ast
-
 from selenium.webdriver.support.color import Color
-
-driver = webdriver.Chrome()
+from xmlrunner import xmlrunner
 
 
 def test_colors():
+    driver = webdriver.Chrome()
     driver.implicitly_wait(7)
     email = "okumura81@yopmail.pp.ua"
     pw = "Passw0rd!"
@@ -30,25 +30,23 @@ def test_colors():
 
     driver.find_element_by_css_selector("img[alt='Icon Health']").click()
 
-
-
-
     rgb1 = driver.find_element_by_xpath(
         '//div[contains(@class, "goalsHeader"]').value_of_css_property("background-color")
     hex1 = Color.from_string(rgb1).hex
-
 
     driver.back()
     sleep(2)
     driver.find_element_by_css_selector("img[alt='Icon Health']").click()
     rgb2 = driver.find_element_by_xpath(
-        '//div[@class="src-containers-goals-___styles__goalsHeader___1VP2m"]').value_of_css_property("background-color")
+        '//div[@class="src-containers-goals-___styles__goalsHeader___1VP2m"]').value_of_css_property(
+        "background-color")
     hex2 = Color.from_string(rgb2).hex
     driver.back()
     sleep(2)
     driver.find_element_by_xpath("//div[text()='Relationships']").click()
     rgb3 = driver.find_element_by_xpath(
-        '//div[@class="src-containers-goals-___styles__goalsHeader___1VP2m"]').value_of_css_property("background-color")
+        '//div[@class="src-containers-goals-___styles__goalsHeader___1VP2m"]').value_of_css_property(
+        "background-color")
     hex3 = Color.from_string(rgb3).hex
 
     assert hex1 == "#30a064"
